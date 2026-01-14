@@ -1,4 +1,8 @@
 
+body {
+    margin: 0;
+    padding: 0;
+}
 div {
     max-width: 1000px;
     margin: 0 auto;
@@ -44,16 +48,20 @@ ul li img {
 }            
 
 .tarjeta-fondo {
-    width: 96%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/assets/sm.jpg);
-    background-size: cover;      
-    background-position: center;  
+    width: 100%;
+    min-height: auto;
+    background-image:
+      linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)),
+      url(/assets/sm.jpg);
+    background-size: cover;
+    background-position: center center;
     border-radius: 12px;
-    padding: 40px;               
-    color: white;                
-    min-height: 300px;           
+    padding: 40px;
+    color: white;
+
     display: flex;
-    align-items: center;          
+    flex-direction: column;
+    gap: 30px;  
 }
 
 .contenido {
@@ -62,6 +70,35 @@ ul li img {
     border-radius: 8px;
     backdrop-filter: blur(5px);    
     max-width: 1000px;
+}
+
+.fila-arriba {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.cuadro-nombre {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 66%;
+}
+
+.cuadro-foto {
+    width: 140px;
+    height: 140px;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.cuadro-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 
